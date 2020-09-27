@@ -1,0 +1,217 @@
+Diambil dari Lab Github:https://www.coursera.org/learn/introduction-git-github/gradedLti/E5MAI/qwiklabs-assessment-introduction-to-github dan https://googlecoursera.qwiklabs.com/focuses/47749
+
+Using username "student-01-6af1dfa3b2cb".
+Authenticating with public key "imported-openssh-key"
+Linux linux-instance 4.9.0-13-amd64 #1 SMP Debian 4.9.228-1 (2020-07-05) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+student-01-6af1dfa3b2cb@linux-instance:~$ git clone https://github.com/izmilia-prastika/intro-git.git
+Cloning into 'intro-git'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+Unpacking objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+student-01-6af1dfa3b2cb@linux-instance:~$ ls
+intro-git
+student-01-6af1dfa3b2cb@linux-instance:~$
+student-01-6af1dfa3b2cb@linux-instance:~$ cd intro-git/
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git config --global user.name "izmilia-prastika"
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git config --global user.email "ismiliaprastika@gmail.com"
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ ls
+README.md
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ nano README.md
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git ad README.md
+git: 'ad' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+        add
+        am
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git add README.md
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git commit
+[master 4ca59df] ini commit pertama, menambahkan kalimat pada file README.md
+ 1 file changed, 1 insertion(+)
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git commit
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git push origin master
+Username for 'https://github.com': izmilia-prastika
+Password for 'https://izmilia-prastika@github.com':
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 398 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/izmilia-prastika/intro-git.git
+   71ddb63..4ca59df  master -> master
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ nano example.py
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git add example.py
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git commit
+[master 08a218d] Ini commit pertama pada file example.py
+ 1 file changed, 3 insertions(+)
+ create mode 100644 example.py
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git push origin master
+Username for 'https://github.com': izmilia-prastika
+Password for 'https://izmilia-prastika@github.com':
+To https://github.com/izmilia-prastika/intro-git.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/izmilia-prastika/intro-git.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/izmilia-prastika/intro-git
+ * branch            master     -> FETCH_HEAD
+   4ca59df..bf66f36  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ test | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git push origin master
+Username for 'https://github.com': izmilia-prastika
+Password for 'https://izmilia-prastika@github.com':
+Counting objects: 5, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 645 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/izmilia-prastika/intro-git.git
+   bf66f36..a7c3a4b  master -> master
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ Using username "student-01-6af1dfa3b2cb".
+Linux linux-instance 4.9.0-13-amd64 #1 SMP Debian 4.9.228-1 (2020-07-05) x86_64
+-bash: Using: command not found
+The programs included with the Debian GNU/Linux system are free software;
+
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ Authenticating with public key "imported-openssh-key"
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+-bash: Authenticating: command not foundstudent-01-6af1dfa3b2cb@linux-instance:~$ git clone https://github.com/izmilia-prastika/intro-git.git
+Cloning into 'intro-git'...
+
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ Linux linux-instance 4.9.0-13-amd64 #1 SMP Debian 4.9.228-1 (2020-07-05) x86_64
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+Unpacking objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+student-01-6af1dfa3b2cb@linux-instance:~$ ls
+intro-git
+-bash: Linux: command not found
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ The programs included with the Debian GNU/Linux system are free software;
+student-01-6af1dfa3b2cb@linux-instance:~$
+student-01-6af1dfa3b2cb@linux-instance:~$ cd intro-git/
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git config --global user.name "izmilia-prastika"
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git config --global user.email "ismiliaprastika@gmail.com"
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ ls
+README.md
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ nano README.md
+-bash: The: command not found
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ the exact distribution terms for each program are described in the
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+-bash: the: command not found
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ individual files in /usr/share/doc/*/copyright.
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git ad README.md
+git: 'ad' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+        add
+        am
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git add README.md
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git commit
+[master 4ca59df] ini commit pertama, menambahkan kalimat pada file README.md
+ 1 file changed, 1 insertion(+)
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git commit
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git push origin master
+Username for 'https://github.com': izmilia-prastika
+Password for 'https://izmilia-prastika@github.com':
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 398 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/izmilia-prastika/intro-git.git
+   71ddb63..4ca59df  master -> master
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ nano example.py
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git add example.py
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git commit
+[master 08a218d] Ini commit pertama pada file example.py
+ 1 file changed, 3 insertions(+)
+ create mode 100644 example.py
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git push origin master
+Username for 'https://github.com': izmilia-prastika
+Password for 'https://izmilia-prastika@github.com':
+To https://github.com/izmilia-prastika/intro-git.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/izmilia-prastika/intro-git.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/izmilia-prastika/intro-git
+ * branch            master     -> FETCH_HEAD
+   4ca59df..b-bash: individual: command not found
+student-01-6af1dfa3b2cb@linux-instance:~/intro-git$
+
+Selesai
